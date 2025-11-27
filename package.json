@@ -1,0 +1,27 @@
+{
+  "name": "hello-world-",
+  "version": "1.0.0",
+  "description": "to created a hello Codegisoft Academy projet using html css and linter",
+  "main": "index.js",
+  "devDependencies": {
+    "hint": "^7.1.13",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngnayoufabiola/Hello-world-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngnayoufabiola/Hello-world-/issues"
+  },
+  "homepage": "https://github.com/ngnayoufabiola/Hello-world-#readme"
+}
