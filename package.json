@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-",
+  "name": "Porfolio-",
   "version": "1.0.0",
   "description": "to created a hello Codegisoft Academy projet using html css and linter",
   "main": "index.js",
@@ -21,7 +21,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ngnayoufabiola/Hello-world-/issues"
+    "url": "https://github.com/ngnayoufabiola/Porfolio-/issues"
   },
-  "homepage": "https://github.com/ngnayoufabiola/Hello-world-#readme"
+  "homepage": "https://github.com/ngnayoufabiola/Porfolio-#readme"
 }
