@@ -331,6 +331,62 @@ footer {
   background-color: #ebf0ee;
 }
 
+.desktop_menu.active {
+  display: flex;
+  background-color: #000;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  width: 100%;
+  padding: 500px 10px 300px 10px;
+  opacity: 90%;
+}
+
+.desktop_menu.active ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  list-style: none;
+  margin-top: 200px;
+  padding: 100px 10px;
+}
+ .mail a {
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+    display: none;
+  }
+.desktop_menu.active ul li a {
+  color: #fff;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.mobile_menu.active {
+  z-index: 2000;
+}
+
+.mobile_menu.active p {
+  background-color: #fff;
+}
+
+.mobile_menu.active p:nth-child(1) {
+  rotate: 45deg;
+  position: relative;
+  top: 6px;
+}
+
+.mobile_menu.active p:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile_menu.active p:nth-child(3) {
+  rotate: -45deg;
+  position: relative;
+  top: -12px;
+}
+
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .project_cards {
     display: grid;
@@ -375,14 +431,15 @@ footer {
 @media (min-width: 1025px) {
   .mobile_menu {
     display: none;
-
   }
-.desktop_menu ul li a{
-  text-decoration: none;
-  font-size: 26px;
-  color: #36b37e;
-  font-weight: 700;
-}
+
+  .desktop_menu ul li a {
+    text-decoration: none;
+    font-size: 26px;
+    color: #36b37e;
+    font-weight: 700;
+  }
+
   .desktop_menu {
     display: flex;
   }
@@ -452,16 +509,5 @@ footer {
     font-weight: 800px;
   }
 
-  .mail a {
-    text-decoration: none;
-    color: #000;
-    font-size: 22px;
-    display: none;
-  }
+ 
 }
-
-
-
-
-
-
