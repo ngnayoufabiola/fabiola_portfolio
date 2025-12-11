@@ -279,7 +279,7 @@ footer ul li {
 
 .contact_text p {
   font-size: 40px;
-  font-weight: 700px;
+  font-weight: 700;
   padding: 0 20px;
   text-align: center;
 }
@@ -375,8 +375,14 @@ footer {
 @media (min-width: 1025px) {
   .mobile_menu {
     display: none;
-  }
 
+  }
+.desktop_menu ul li a{
+  text-decoration: none;
+  font-size: 26px;
+  color: #36b37e;
+  font-weight: 700;
+}
   .desktop_menu {
     display: flex;
   }
@@ -386,6 +392,9 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    text-decoration: none;
+    list-style: none;
+    text-align: none;
   }
 
   nav {
