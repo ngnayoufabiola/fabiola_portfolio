@@ -315,12 +315,6 @@ footer ul li {
   border-radius: 5px;
 }
 
-.mail a {
-  text-decoration: none;
-  color: #000;
-  font-size: 22px;
-}
-
 footer {
   display: flex;
   align-items: center;
@@ -350,12 +344,14 @@ footer {
   margin-top: 200px;
   padding: 100px 10px;
 }
- .mail a {
-    text-decoration: none;
-    color: #000;
-    font-size: 22px;
-    display: none;
-  }
+
+.mail a {
+  text-decoration: none;
+  color: #000;
+  font-size: 22px;
+  display: none;
+}
+
 .desktop_menu.active ul li a {
   color: #fff;
   font-size: 26px;
@@ -385,7 +381,6 @@ footer {
   position: relative;
   top: -12px;
 }
-
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .project_cards {
@@ -508,6 +503,4 @@ footer {
     align-items: center;
     font-weight: 800px;
   }
-
- 
 }
