@@ -4,7 +4,7 @@ mobileMenu.addEventListener("click",()=>{
 mobileMenu.classList.to("active");
  desktopMenu.classList.toggle("active");
  }
-     )
+ )
 
 
      
