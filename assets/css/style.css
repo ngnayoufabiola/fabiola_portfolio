@@ -94,6 +94,7 @@ footer ul li {
   height: 288px;
   width: 327px;
   background: #ebf0ee;
+  object-fit: cover;
 }
 
 .about_card img {
@@ -235,7 +236,7 @@ footer ul li {
   flex-direction: column;
   gap: 30px;
   width: 327px;
-  height: 316px;
+  height: 370px;
   border: 1px solid #ebf0ee;
   background-color: #ebf0ee;
   border-radius: 8px;
@@ -259,6 +260,14 @@ footer ul li {
   background-color: #fff;
   padding: 5px;
   color: #36b37e;
+}
+
+.about_card button {
+  background-color: #36b37e;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+  font-size: 15px;
 }
 
 /* contact_styling */
@@ -336,6 +345,14 @@ footer {
   opacity: 90%;
 }
 
+.modal_content ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
 .desktop_menu.active ul {
   display: flex;
   flex-direction: column;
@@ -352,6 +369,16 @@ footer {
   display: none;
 }
 
+.modal_content .modal_links a {
+  text-decoration: none;
+  font-size: 26px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: #36b37e;
+  text-align: center;
+}
+
 .desktop_menu.active ul li a {
   color: #fff;
   font-size: 26px;
@@ -360,6 +387,13 @@ footer {
 
 .mobile_menu.active {
   z-index: 2000;
+}
+
+.modal_content p {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  color: #000;
 }
 
 .mobile_menu.active p {
@@ -380,6 +414,115 @@ footer {
   rotate: -45deg;
   position: relative;
   top: -12px;
+}
+
+/* General modal styling */
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  overflow-y: auto;
+  filter: none;
+  animation: modal-fade 240ms ease-out;
+}
+
+.modal_content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+  animation: modal-slide-up 240ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal_content .modal_image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.modal_content .modal_image_container img {
+  width: 90%;
+  height: auto;
+}
+
+.modal_content .close_Button {
+  font-size: 35px;
+  z-index: 2000;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal_content h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.modal_content ul li {
+  font-size: 18px;
+  background-color: #ebf0ee;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.modal_content .modal_links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* When modal is open, blur all direct body children except the modal container so
+  the modal stays sharp and visible. Keep body overflow hidden to avoid page scroll. */
+body.modal-open > *:not(#modal_container) {
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Ensure modal container itself is not affected by blur */
+#modal_container {
+  filter: none;
+}
+
+/* Modal animations */
+@keyframes modal-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes modal-slide-up {
+  from {
+    transform: translateY(20px) scale(0.98);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.modal_content.close-anim {
+  animation: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
